@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../File_Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../File_Bootstrap/node_modules/bootstrap/dist/css/main.css">
+    <script src="../File_Bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../Resource/font_awesome.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <script src="../File_Angular/angular/angular.js"></script>
+    <script src="../File_Angular/angular/angular-route.js"></script>
+
+    <script>
+        var app = angular.module('App',['ngRoute']) ;
+        window.onload = () => {
+    
+    let idCart = document.getElementById('idCart');
+    let idLogin = document.getElementById('idLogin');
+    let idRegister = document.getElementById('idRegister');
+    let idAccount = document.getElementById('idAccount');
+
+    let save = document.getElementById("save");
+    
+    
+    if (save.value === "0") {
+
+        idCart.style.display = "none"
+        idLogin.style.display = "inline-block"
+        idRegister.style.display = "inline-block"
+        idAccount.style.display = "none"
+    }
+    else{
+
+
+        idCart.style.display = "inline-block"
+        idLogin.style.display = "none"
+        idAccount.style.display = "inline-block"
+        idRegister.style.display = "none"
+    }
+        }
+        
+
+        app.config(function ($routeProvider) {
+            $routeProvider.when("/product-detail/:id/:idTk", {
+                templateUrl : "../../Page/ProductDetails.html" ,
+                controller : "productDetailCrtl"
+            })
+            .when("/product-manage/:idTk", {
+                templateUrl : "../Page/admin/ProductManage.html" ,
+                controller : "productManageCrtl"
+            })
+            .when("/bill-manage/:idTk", {
+                templateUrl : "../Page/admin/BillManage.html" ,
+                controller : "billManageCrtl"
+            })
+            .when("/category-product-manage/:idTk", {
+                templateUrl : "../Page/admin/CategoryProductManage.html" ,
+                controller : "categoryProductManageCrtl"
+            })
+            .when("/login", {
+                templateUrl : "Login.html" ,
+                controller : "loginCrtl"
+            })
+            .when("/register", {
+                templateUrl : "Register.html" ,
+                controller : "registerCtrl"
+            })
+            .when("/search/:idTk", {
+                templateUrl : "Search.html" ,
+                controller : "searchCrtl"
+            })
+            .when("/cart/:idTk/:idSp", {
+                templateUrl : "Cart.html" ,
+                controller : "cartCrtl"
+            })
+            .when("/bill-accept/:idSp/:idTk",{
+                templateUrl : "BillAccept.html" ,
+                controller : "billAcceptCtrl"
+            })
+            .when("/admin/home/:dangNhap/:id",{
+                templateUrl : "../Page/admin/Home.html" ,
+                controller : "homeCtrlAd"
+            })
+            .when("/home/:dangNhap/:id",{
+                templateUrl : "Home.html" ,
+                controller : "homeCtrl"
+            })
+            .when("/add-product/:idTk", {
+                templateUrl : "addProduct.html" ,
+                controller : "productManageCrtl"
+            })
+            .when("/update-product/:id/:idTk", {
+                templateUrl : "updateProduct.html" ,
+                controller : "updateProductCrtl"
+            })
+            .otherwise({
+                redirectTo : "/home/0/null"
+            })
+        })
+    </script>
+    <script src="../../File_JS/homeAd.js"></script>
+    <script src="../../File_JS/home.js"></script>
+    <script src="../../File_JS/billManage.js"></script>
+    <script src="../../File_JS/categoryProductManage.js"></script>
+    <script src="../../File_JS/productManage.js"></script>
+    <script src="../../File_JS/productDetail.js"></script>
+    <script src="../../File_JS/updateProduct.js"></script>
+    <script src="../../File_JS/register.js"></script>
+    <script src="../../File_JS/login.js"></script>
+    <script src="../../File_JS/cart.js"></script>
+    <script src="../../File_JS/billAccept.js"></script>
+    <script src="../../File_JS/search.js"></script>
+
+</head>
+<body ng-app="App">
+    <style>
+        a:hover {
+            opacity: 0.8;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <input type="text" style="display: none;" name="" id="save">
+    <div class="fixed-top" id="header" style="display: block;" >
+        <nav class="navbar  navbar-expand-sm shadow-md" style="background-image: linear-gradient(0,rgb(132, 230, 255),rgb(0, 136, 255));">
+  
+            <div class="container" style="font-size: 18px;">
+  
+                <div class="d-flex align-items-center">
+                    <!-- Khu vực logo -->
+                    <a href="#!home/1/{{idTk}}" class="me-5">
+                        <img src="../../Resource/img/Sweet-removebg-preview.png" style="height: 40px;">
+                    </a>
+  
+                    <!-- Danh mục -->
+                    
+                </div>
+  
+                <!-- Khu vực button đăng ký đăng nhập -->
+                <ul style="list-style: none;" class=" fs-5 d-flex align-items-center">
+                    <li id="idCart" class=" nav-item"><a href="#!cart/{{idTk}}/null" class="align-icons"  > <i class="fa-solid fa-cart-shopping me-1 "  ></i> <span ng-model="soLuongGH"  style="background-color: #2dc6ac; color: #fff; border-radius: 14px;text-align: center; position: relative; padding: 0px 10px; top: -12px;right: 16px; border: 1px solid rgb(51, 156, 235); font-size: 14px;">{{soLuongGH}}</span> </a>
+                    </li>
+                    
+                    <li class="me-3 nav-item"  ><a href="#!search/{{idTk}}" class="align-icons"  > <i class="fa-solid me-1 fa-magnifying-glass"></i> </a></li>
+                    <li>|</li>
+                    <li id="idLogin" class="nav-item ms-1">
+                        <a href="#!login" class="btn rounded-4 me-2 px-3" style="font-size: large; border: 1px solid rgb(6, 148, 6); color: black; background-color: rgb(110, 225, 110);;">Đăng nhập</a>
+                    </li>
+                    <li id="idRegister" class="nav-item ms-1">
+                        <a href="#!register" class="btn  rounded-4" style="border: 1px solid rgb(3, 114, 118); background-color:rgb(71, 246, 255);">Đăng ký</a>
+                    </li>
+                    <li id="idAccount" class="nav-item ms-1">
+                        <a class="mx-2" href="#!home/0/null"><i class="fa-solid fa-right-from-bracket"></i></a>
+                         <a href=""><i class="fa-regular fa-user"></i>  {{id}}</a>
+                    </li>
+                </ul>
+            </div>
+  
+        </nav>
+    </div>
+    <div style="margin-top: 86px;" ng-view>
+    </div>
+    
+    
+</body>
+</html>

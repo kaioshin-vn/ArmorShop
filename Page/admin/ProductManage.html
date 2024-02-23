@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="../../File_Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../File_Bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../Resource/font_awesome.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Khu vực header -->
+    <div class="container pb-4 mt-5">
+
+        <div class="row mt-5 bg-white">
+            <div style=" 
+            height: 3px;
+            width: 100%;
+            background-position-x: -30px;
+            background-size: 116px 3px;
+            background-image: repeating-linear-gradient(45deg,#6fa6d6,#6fa6d6 33px,transparent 0,transparent 41px,#f18d9b 0,#f18d9b 74px,transparent 0,transparent 82px);
+        " class=""></div>
+            <div class="d-flex align-items-center  p-4">
+                <img src="../../Resource/img/Sweet-remo style="height: 60px;" class="rounded-3 border"vebg-preview.png" style="height: 100px;" alt="">
+                <h1 class="ms-3 my-auto" style="color: rgb(47, 182, 47);">| Quản lý sản phẩm</h1>
+            </div>
+        </div>
+
+       <div class="bg-white row py-4 px-5" style="border-top: 2px dotted blanchedalmond;">
+                
+                <!-- Danh sách sản phẩm -->
+                <table class="table mt-4">
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu danh sách sản phẩm sẽ được hiển thị ở đây -->
+                    <tr ng-repeat="item in dsSanPham">
+                    <td>{{item.id}}</td>
+                    <td class="fs-5">{{item.ten}}</td>
+                    <td><img src="../../{{item.anh[0]}}" style="height: 60px;" class="rounded-3 border" alt=""></td>
+                    <td>
+                        <a class="btn rounded-4 me-2 px-3" style="font-size: large; background-color: rgb(254, 168, 212);border: 3px solid rgb(212, 45, 45); color: rgb(84, 113, 243);" href="#!product-detail/{{item.id}}/{{idTk}}" >Chi tiết</a>
+                        <a href="#!update-product/{{item.id}}/{{idTk}}" class="btn rounded-4 me-2 px-3" style="font-size: large; background-color: rgb(127, 255, 138); border: 3px solid rgb(69, 141, 242)" >Sửa</a>
+                        <button class="btn rounded-4 me-2 px-3" style="font-size: large; background-color: black;border: 3px solid rgb(255, 0, 200); color: pink;" ng-click="xuLiId(item.id)" data-bs-target="#deleteCategoryModal" data-bs-toggle="modal" >Xóa</button>
+                    </td>
+                    </tr>
+                  
+                </tbody>
+                </table>
+            
+                <!-- Nút Thêm sản phẩm -->
+                <a href="#!add-product/{{idTk}}" class="btn mt-3 py-2 rounded-4 ms-5" style="width: 200px;border: 3px solid rgb(63, 149, 214);background-color: rgb(170, 252, 255); font-size: large;"  >Thêm sản phẩm</a>
+            </div>
+            <style>
+                footer a{
+                    color: rgb(232, 79, 156);
+                    text-decoration: none;
+                }
+                a{
+                    color: unset;
+                    text-decoration: none;
+                }
+                a:hover{
+                    opacity: 0.7;
+                }
+                .btn:hover{
+                    opacity: 0.7;
+                    
+                }
+            </style>
+            <!-- Xóa -->
+            <div class="modal fade" id="deleteCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  <h5 class="modal-title "  id="addCategoryModalLabel">Bạn chắc chắn muốn xóa ?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <!-- Form Thêm sản phẩm sẽ được đặt ở đây -->
+                  <form>
+                      <button class="btn btn-light rounded-4 py-2 " style="font-size: large; border: 3px solid rgb(143, 140, 140);" data-bs-dismiss="modal">
+                          Hủy
+                      </button>
+                      <a 
+                          ng-click="xuLiXoa()"
+                          name=""
+                          id=""
+                          class="btn ms-2 rounded-4 py-2 px-4"
+                          style="background-color: #f1acac; border: 3px solid rgb(255, 0, 162);font-size: large;color:rgb(20, 20, 20)"
+                          role="button"
+                          >Xóa</a
+                      >
+                      
+                  </form>
+                  </div>
+              </div>
+              </div>
+          </div>
+    </div>
+    <footer class="footer mt-5 border">
+        <div class="container-fluid w-100 bg-light">
+          <div class="row">
+            <div class="col-md-4 ">
+              <img class="ms-5" src="../../Resource/img/Sweet-removebg-preview.png" height="80px" alt="Logo">
+            </div>
+            <div class="col-md-3 mt-3 d-flex align-items-center ">
+              <ul class="list-unstyled " style="font-size: 16px;">
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ : <u>0978040960</u></a></li>
+              </ul>
+            </div>
+            <div class="col-md-1 mt-3 d-flex align-items-center fs-5">
+              <ul class="list-unstyled social-links"  style="font-size: 16px;">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 fs-5  mt-3">
+                Địa chỉ : <u>Số 8 ,Ngõ 50 Trần Bình , Phường Mai Dịch , Quận Cầu Giấy , Thành Phố Hà Nội</u>
+              </div>
+          </div>
+          
+          <div class="mx-auto mt-3 pb-4 copyright fs-5 w-100" >
+            &copy; Bản quyền thuộc về <a href="https://www.facebook.com/profile.php?id=100049975813334">Đặng Đình Giáp</a>
+          </div>
+        </div>
+      </footer>
+
+      
+</body>
+</html>

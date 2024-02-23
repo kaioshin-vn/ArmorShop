@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../../File_Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../File_Bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../Resource/font_awesome.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+</head>
+<body >
+    
+    <div class="py-5" style="background-color: rgb(255, 226, 231); margin-top: -86px;">
+        <div class="container-fluid mt-5">
+            <div class="d-flex justify-content-around">
+                <div class="w-70"  style="width: 700px;">
+                    <img src="../../Resource/img/Sweet-removebg-preview.png" alt="">
+                    <div class="" style="font-size: xx-large;">
+                        <p>Shop bán đồng hồ uy tín số 1 Vịnh Bắc Bộ</p>
+                    </div>
+                </div>
+                <div class="container1 w-30" style="width: 430px;">
+                    <h1>Đăng nhập</h1>
+                    <div class="alert alert-danger my-3" ng-hide="status" ng-model="message" style="color: #333;"><i style="color: red;" class="fa-solid fa-ban"></i> {{message}}</div>
+                    <form id="login-form">
+                        <div class="input-container">
+                            <label for="username">Tên tài khoản:</label>
+                            <input ng-model="taiKhoan" placeholder = "Nhập tên đăng nhập" type="text" id="username" name="username" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="password">Mật khẩu:</label>
+                            <input ng-model="matKhau" placeholder="Nhập mật khẩu" type="password" id="password" name="password" required>
+                        </div>
+                        <button style="width: 100%; font-size:larger;" class="fw-bold mt-3 mb-3" ng-click="xuLiDN()" type="submit">Đăng nhập</button>
+                        <div class="forgot-password">
+                            <a href="" class="fw-bold mt-3 mb-3">Chưa có tài khoản?</a>
+                        </div>
+                        <hr class="mt-3 mb-3">
+                        <a href="#!register" class="btn fw-bold mt-3 mb-3 pt-2 pb-2"  style=" width: 100%; font-size:larger; background-color: rgb(24, 222, 73); color: #fff;">Đăng Ký</a>
+            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+
+        .container1 {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .input-container {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        
+        a {
+            text-decoration: none;
+            color: unset;
+            font-size: 14px;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        a:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+            </style>
+    <footer class=" border d-block">
+        <div class="container-fluid w-100 bg-light">
+          <div class="row">
+            <div class="col-md-4 ">
+              <img class="ms-5" src="../../Resource/img/Sweet-removebg-preview.png" height="80px" alt="Logo">
+            </div>
+            <div class="col-md-3 mt-3 d-flex align-items-center ">
+              <ul class="list-unstyled " style="font-size: 16px;">
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ : <u>0978040960</u></a></li>
+              </ul>
+            </div>
+            <div class="col-md-1 mt-3 d-flex align-items-center fs-5">
+              <ul class="list-unstyled social-links"  style="font-size: 16px;">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 fs-5  mt-3">
+                Địa chỉ : <u>Số 8 ,Ngõ 50 Trần Bình , Phường Mai Dịch , Quận Cầu Giấy , Thành Phố Hà Nội</u>
+              </div>
+          </div>
+          
+          <div class="mx-auto mt-3 pb-4 copyright fs-5 w-100" >
+            &copy; Bản quyền thuộc về <a class="fs-5" href="https://www.facebook.com/profile.php?id=100049975813334">Đặng Đình Giáp</a>
+          </div>
+        </div>
+    </footer>
+    
+    
+</body>
+
+</html>

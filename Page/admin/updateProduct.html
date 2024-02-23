@@ -1,0 +1,65 @@
+<div class="container mt-5">
+    <div class="row " style="color: #1049b4; font-size: large;">
+        <div class="col-6 ">
+            <div class="modal-body mx-3">
+            <!-- Form Thêm sản phẩm sẽ được đặt ở đây -->
+            <form>
+                <div class="mb-3">
+                <label for="categoryName" class="form-label">Tên sản phẩm :</label>
+                <input ng-model="sanPhamUpdate.ten" required type="text" class="form-control" id="categoryName">
+                </div>
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Giá :</label>
+                    <input ng-model="sanPhamUpdate.gia" required type="number" class="form-control" id="categoryName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryName" class="form-label">Số lượng : </label>
+                        <input ng-model="sanPhamUpdate.soLuong" required type="number" class="form-control" id="categoryName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryName" class="form-label">Hãng : </label>
+                        <input ng-model="sanPhamUpdate.hang" required type="text" class="form-control" id="categoryName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryName" class="form-label">Mã : </label>
+                        <input ng-model="sanPhamUpdate.ma" required type="text" class="form-control" id="categoryName">
+                    </div>
+            </form>
+            </div>
+        </div>
+        <div class="col-6">
+            
+            <div class="modal-body mx-3">
+            <!-- Form Thêm sản phẩm sẽ được đặt ở đây -->
+            <form>
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Danh mục :</label>
+                    <select ng-model="sanPhamUpdate.idDanhMuc" aria-placeholder="" name="" class="form-select" id="">
+                        <option value="" selected>Chọn danh mục cho sản phẩm</option>
+                        <option ng-repeat="item in dsDanhMuc" value="{{item.id}}">{{item.ten}}</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Mô tả : </label>
+                    <textarea ng-model="sanPhamUpdate.moTa" required type="text" class="form-control " id="categoryName" style="height: 100px;"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Giảm giá :</label>
+                    <input ng-model="sanPhamUpdate.giamGia" required type="number" min = "1" max="99" class="form-control " id="categoryName">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="mx-3">
+        <div class="alert alert-danger mt-2" ng-hide="status">
+            {{message}}
+        </div>
+        <div class="mt-3 ms-1">
+            <a class="btn btn-light rounded-4 py-2 me-3 " style="font-size: large; border: 3px solid rgb(143, 140, 140);" href="#!product-manage">
+                Hủy
+            </a>
+            <button type="submit" ng-click="xuLiSua()" class="btn btn-primary px-4 py-2 rounded-4"  style="background-color: #7ee9dd; border: 3px solid rgb(231, 101, 183);font-size: large;color:rgb(124, 69, 2)">Sửa</button>
+        </div>
+    </div>
+</div>

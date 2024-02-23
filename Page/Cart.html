@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="../File_Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../File_Bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../Resource/font_awesome.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        a{
+            text-decoration: none;
+            color: unset;
+        }
+        a:hover{
+            cursor: pointer;
+            color: unset;
+            opacity: 0.7;
+        }
+        .mx-2:hover{
+            cursor: pointer;
+        }
+        .input-group-text:hover{
+            cursor: pointer;
+        }
+    </style>
+    <div style="margin-bottom: 86px;"></div>
+    <div class="container mb-5 p-5 rounded-5 " style="background-color: rgb(255, 194, 194);" > 
+        <h2 class="mb-5" style="text-align: center;">Giỏ hàng</h2>
+        <div class="">
+            <div class="d-flex justify-content-between align-items-center py-4 px-3 rounded-3" style="background-color: #cfffac;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mx-2" ng-click="all()" id="all">Chọn tất cả</h5>
+                    <h5  class="mx-2" ng-click="delete()" id="delete">Xóa</h5>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span  class="mx-2" type="text" id="pay" >Tổng thanh toán (0 sản phẩm) :</span>
+                    <span  class="ms-2 fs-4"  style="color: #2d98c6;margin-right: 140px; " >{{toTal.toLocaleString()}} VNĐ </span>
+                    <a class="mx-2 btn fs-5 py-2 px-3"  href="" style="background-color: rgb(174, 255, 250); border: 2px solid rgb(10, 159, 185);" id="click-buy" ng-click="xuLiMuaHang()" >Mua Hàng</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-auto " ng-repeat="item in SPGioHang track by $index" style="width: 90%;">
+            <div class="py-4 mt-5 px-3 rounded-3" style="background-color: #fff;border: 2px solid #00BCD4;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <input ng-click="xuLiChon($index)" type="checkbox" style="width: 20px; height: 20px;" name="checkbox" class="mx-2"> 
+                    <div class="d-flex justify-content-between align-items-center border rounded-3 overflow-hidden" style="height: 95px; width: 95px;" >
+                        <img src="../../{{item.anh[0]}}" style="width: 100%;" class="w-100" alt="">
+                    </div>
+                    <div class="w-50 overflow-hidden">
+                        <h5><a href="#!product-detail/{{item.id}}/{{idTk}}">{{item.ten}}</a></h5>
+                    </div>
+                    <div class="input-group " style="width: 128px;">
+                        <span ng-click="minus($index)" class="input-group-text bg-light"><i class="fa-solid fa fa-minus"></i></span>
+                        <input type="text" ng-keyup="checkNumber($index)" ng-model="item.soLuongSP" value="{{item.soLuongSP}}" class="form-control " aria-label="Dollar amount (with dot and two decimal places)">
+                        <span ng-click="plus($index)" class="input-group-text bg-light"><i class="fa-solid fa fa-plus"></i></span>
+                    </div>
+                    <span class="fs-4" style="color: #2dc66a;">{{item.giaThatSP.toLocaleString()}} VNĐ</span>
+                    <a ng-click="xuLiId(item.id)"data-bs-target="#deleteCategoryModal" data-bs-toggle="modal"  style="font-size: larger;">Xóa</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="deleteCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title "  id="addCategoryModalLabel">Bạn chắc chắn muốn xóa ?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <!-- Form Thêm sản phẩm sẽ được đặt ở đây -->
+                <form>
+                    <button class="btn btn-light rounded-4 py-2 " style="font-size: large; border: 3px solid rgb(143, 140, 140);" data-bs-dismiss="modal">
+                        Hủy
+                    </button>
+                    <a 
+                        ng-click="xuLiXoa()"
+                        name=""
+                        id=""
+                        class="btn ms-2 rounded-4 py-2 px-4"
+                        style="background-color: #f1acac; border: 3px solid rgb(255, 0, 162);font-size: large;color:rgb(20, 20, 20)"
+                        role="button"
+                        >Xóa</a
+                    >
+                    
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        
+     </div>
+
+     <footer class="footer border">
+        <div class="container-fluid w-100 bg-light">
+          <div class="row">
+            <div class="col-md-4 ">
+              <img class="ms-5" src="../Resource/img/Sweet-removebg-preview.png" height="80px" alt="Logo">
+            </div>
+            <div class="col-md-3 mt-3 d-flex align-items-center ">
+              <ul class="list-unstyled " style="font-size: 16px;">
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ : <u>0978040960</u></a></li>
+              </ul>
+            </div>
+            <div class="col-md-1 mt-3 d-flex align-items-center fs-5">
+              <ul class="list-unstyled social-links"  style="font-size: 16px;">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 fs-5  mt-3">
+                Địa chỉ : <u>Số 8 ,Ngõ 50 Trần Bình , Phường Mai Dịch , Quận Cầu Giấy , Thành Phố Hà Nội</u>
+              </div>
+          </div>
+          <div class="mx-auto mt-3 pb-4 copyright fs-5 w-100" >
+            &copy; Bản quyền thuộc về <a href="https://www.facebook.com/profile.php?id=100049975813334">Đặng Đình Giáp</a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

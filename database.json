@@ -1,0 +1,620 @@
+{
+  "tai-khoan": [
+    {
+      "hoTen": "Phạm Thị Lan",
+      "id": "dgiap",
+      "matKhau": "123",
+      "email": "dgiap@gmail.com.vn",
+      "gioiTinh": 0,
+      "loaiTaiKhoan": "ad",
+      "listSanPham": []
+    },
+    {
+      "hoTen": "Đặng Thai Mai ",
+      "id": "kaioshin",
+      "matKhau": "132",
+      "email": "dgiap@gmail.com.vn",
+      "gioiTinh": 0,
+      "loaiTaiKhoan": "kh",
+      "listSanPham": []
+    },
+    {
+      "hoTen": "Phạm Thị Lan",
+      "id": "kaioshin1",
+      "matKhau": "123",
+      "email": "dgiap@gmail.com.vn",
+      "gioiTinh": 0,
+      "loaiTaiKhoan": "kh",
+      "listSanPham": []
+    }
+  ],
+  "danh-muc": [
+    {
+      "ten": "Đồng hồ nam",
+      "id": 1
+    },
+    {
+      "ten": "Đồng hồ nữ",
+      "id": 2
+    }
+  ],
+  "san-pham": [
+    {
+      "id": 1,
+      "idDanhMuc": "2",
+      "ten": "Đồng hồ Nam Sunmate WM192038GD",
+      "hang": "Sunmate",
+      "moTa": "Thương Hiệu: Sunmate , Mã Sản Phẩm: S20088LC , Giới Tính: Nữ , Chất Liệu Kính: Kính khoáng , Chất Liệu Vỏ: Thép Không Gỉ , Màu dây: Đen , Đường Kính Mặt Số: 32mm , Chống Nước: 3 ATM , Máy: Pin (Quartz)",
+      "gia": 1500000,
+      "ngayThem": "05/24/2024",
+      "giamGia": 30,
+      "ma": "WM192038GD",
+      "daBan": 12,
+      "anh": [
+        "../../Resource/img/item1.jpg",
+        "../../Resource/img/dt1_1.jpg",
+        "../../Resource/img/dt1_2.jpg",
+        "../../Resource/img/dt1_3.jpg",
+        "../../Resource/img/dt1_4.jpg"
+      ],
+      "soLuong": 525
+    },
+    {
+      "id": 2,
+      "idDanhMuc": 2,
+      "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+      "hang": "Sunmate",
+      "moTa": "Thương Hiệu: Sunmate , Mã Sản Phẩm: S20088LC , Giới Tính: Nữ , Chất Liệu Kính: Kính khoáng , Chất Liệu Vỏ: Thép Không Gỉ , Màu dây: Đen , Đường Kính Mặt Số: 32mm , Chống Nước: 3 ATM , Máy: Pin (Quartz)",
+      "gia": 2500000,
+      "ngayThem": "05/24/2024",
+      "giamGia": 30,
+      "ma": "WM192038GD",
+      "daBan": 14,
+      "anh": [
+        "../../Resource/img/item2.jpg",
+        "../../Resource/img/dt2_1.webp",
+        "../../Resource/img/dt2_2.webp",
+        "../../Resource/img/dt2_3.webp",
+        "../../Resource/img/dt2_4.webp"
+      ],
+      "soLuong": 104
+    },
+    {
+      "id": 3,
+      "idDanhMuc": 1,
+      "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+      "hang": "Sunmate",
+      "moTa": "Thương Hiệu: Sunmate , Mã Sản Phẩm: S20088LC , Giới Tính: Nữ , Chất Liệu Kính: Kính khoáng , Chất Liệu Vỏ: Thép Không Gỉ , Màu dây: Đen , Đường Kính Mặt Số: 32mm , Chống Nước: 3 ATM , Máy: Pin (Quartz)",
+      "gia": 4500000,
+      "ngayThem": "05/24/2024",
+      "giamGia": 30,
+      "ma": "WM192038GD",
+      "daBan": 34,
+      "anh": [
+        "../../Resource/img/item3.jpg",
+        "../../Resource/img/dt3_1.jpg",
+        "../../Resource/img/dt3_2.jpg",
+        "../../Resource/img/dt3_3.jpg",
+        "../../Resource/img/dt3_4.jpg"
+      ],
+      "soLuong": 88
+    },
+    {
+      "id": 4,
+      "idDanhMuc": 1,
+      "ten": "Đồng hồ nam Tissot Le Locle",
+      "hang": "Sunmate",
+      "moTa": "Thương Hiệu: Sunmate , Mã Sản Phẩm: S20088LC , Giới Tính: Nữ , Chất Liệu Kính: Kính khoáng , Chất Liệu Vỏ: Thép Không Gỉ , Màu dây: Đen , Đường Kính Mặt Số: 32mm , Chống Nước: 3 ATM , Máy: Pin (Quartz)",
+      "gia": 5200000,
+      "ngayThem": "05/24/2024",
+      "giamGia": 30,
+      "ma": "WM192038GD",
+      "daBan": 43,
+      "anh": [
+        "../../Resource/img/item4.jpg",
+        "../../Resource/img/dt4_1.jpg",
+        "../../Resource/img/dt4_2.jpg",
+        "../../Resource/img/dt4_3.jpg",
+        "../../Resource/img/dt4_4.jpg"
+      ],
+      "soLuong": 52
+    },
+    {
+      "id": 5,
+      "idDanhMuc": 2,
+      "ten": "Đồng hồ nam Tissot Special Collections",
+      "hang": "Sunmate",
+      "moTa": "Thương Hiệu: Sunmate , Mã Sản Phẩm: S20088LC , Giới Tính: Nữ , Chất Liệu Kính: Kính khoáng , Chất Liệu Vỏ: Thép Không Gỉ , Màu dây: Đen , Đường Kính Mặt Số: 32mm , Chống Nước: 3 ATM , Máy: Pin (Quartz)",
+      "gia": 900000,
+      "ngayThem": "05/24/2024",
+      "giamGia": 30,
+      "ma": "WM192038GD",
+      "daBan": 3,
+      "anh": [
+        "../../Resource/img/item5.jpg",
+        "../../Resource/img/dt5_1.jpg",
+        "../../Resource/img/dt5_2.jpg",
+        "../../Resource/img/dt5_3.jpg",
+        "../../Resource/img/dt5_4.jpg"
+      ],
+      "soLuong": 45
+    },
+    {
+      "id": 6,
+      "idDanhMuc": 1,
+      "ten": "Đồng hồ Nam Kaioshin 8GH8WT8",
+      "hang": "Sunmate",
+      "moTa": "Thương Hiệu: Sunmate , Mã Sản Phẩm: S20088LC , Giới Tính: Nữ , Chất Liệu Kính: Kính khoáng , Chất Liệu Vỏ: Thép Không Gỉ , Màu dây: Đen , Đường Kính Mặt Số: 32mm , Chống Nước: 3 ATM , Máy: Pin (Quartz)",
+      "gia": 3800000,
+      "ngayThem": "05/24/2024",
+      "giamGia": 44,
+      "ma": "WM192038GD",
+      "daBan": 0,
+      "anh": [
+        "../../Resource/img/item6.jpg",
+        "../../Resource/img/dt6_1.jpg",
+        "../../Resource/img/dt6_2.jpg",
+        "../../Resource/img/dt6_3.jpg",
+        "../../Resource/img/dt6_4.jpg"
+      ],
+      "soLuong": 14
+    },
+    {
+      "id": 7,
+      "idDanhMuc": 2,
+      "ten": "Đồng hồ Nam Rolex 250h9",
+      "hang": "Sunmate",
+      "moTa": "Thương Hiệu: Sunmate , Mã Sản Phẩm: S20088LC , Giới Tính: Nữ , Chất Liệu Kính: Kính khoáng , Chất Liệu Vỏ: Thép Không Gỉ , Màu dây: Đen , Đường Kính Mặt Số: 32mm , Chống Nước: 3 ATM , Máy: Pin (Quartz)",
+      "gia": 2800000,
+      "ngayThem": "05/24/2024",
+      "giamGia": 30,
+      "ma": "WM192038GD",
+      "daBan": 19,
+      "anh": [
+        "../../Resource/img/item7.jpg",
+        "../../Resource/img/dt7_1.jpg",
+        "../../Resource/img/dt7_2.jpg",
+        "../../Resource/img/dt7_3.jpg",
+        "../../Resource/img/dt7_4.jpg"
+      ],
+      "soLuong": 233
+    },
+    {
+      "idDanhMuc": "1",
+      "ten": "Đồng hồ Catier 59HJF0",
+      "hang": "Rolex",
+      "moTa": "Đồng hồ xịn xò con bò cười",
+      "gia": 2405000,
+      "ngayThem": "01/29/2024",
+      "giamGia": 30,
+      "ma": "G49H9HF8",
+      "daBan": 0,
+      "anh": [
+        "../../Resource/img/item8.jpg",
+        "../../Resource/img/dt8_1.jpg",
+        "../../Resource/img/dt8_2.jpg",
+        "../../Resource/img/dt8_3.jpg",
+        "../../Resource/img/dt8_4.jpg"
+      ],
+      "soLuong": 33,
+      "id": 8
+    }
+  ],
+  "don-hang": [
+    {
+      "id": 1,
+      "tenKH": "Đặng Thai Mai",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ Catier 59HJF0",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "làng Sen , xã Kim Liên , huyện Nam Đàn , tỉnh Nghệ An",
+      "sdt": "0978040961",
+      "ghiChu": "345",
+      "tongTien": 3800000
+    },
+    {
+      "id": 2
+    },
+    {
+      "tenKH": "465y",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "43t",
+      "sdt": "0978040960",
+      "ghiChu": "t43g",
+      "tongTien": 0,
+      "id": 3
+    },
+    {
+      "tenKH": "43t",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "245",
+      "sdt": "0978040960",
+      "ghiChu": "5",
+      "tongTien": 0,
+      "id": 4
+    },
+    {
+      "tenKH": "4t34t",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "53534t",
+      "sdt": "0978040960",
+      "ghiChu": "35325",
+      "tongTien": 3310000,
+      "id": 5
+    },
+    {
+      "tenKH": "43t34t",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "323252",
+      "sdt": "0978040960",
+      "ghiChu": "2525",
+      "tongTien": 3310000,
+      "id": 6
+    },
+    {
+      "tenKH": "33r",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "35325",
+      "sdt": "0978040960",
+      "ghiChu": "25252",
+      "tongTien": 3310000,
+      "id": 7
+    },
+    {
+      "tenKH": "t32t23",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "2t2t3",
+      "sdt": "0978040960",
+      "ghiChu": "35235",
+      "tongTien": 3310000,
+      "id": 8
+    },
+    {
+      "tenKH": "22525",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "Ngõ 50 , đường Trần Bình , phường Mai Dịch , quận Cầu Giấy , Hà Nội",
+      "sdt": "0978040960",
+      "ghiChu": "52",
+      "tongTien": 3310000,
+      "id": 9
+    },
+    {
+      "tenKH": "4t",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ Nam Kaioshin 8GH8WT8",
+          "soLuong": 4
+        }
+      ],
+      "diaChi": "43t",
+      "sdt": "0355232762",
+      "ghiChu": "35325",
+      "tongTien": 8672000,
+      "id": 10
+    },
+    {
+      "tenKH": "ff",
+      "sanPham": [
+        {
+          "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "Ngõ 50 , đường Trần Bình , phường Mai Dịch , quận Cầu Giấy , Hà Nội",
+      "sdt": "0978040960",
+      "ghiChu": "5355",
+      "tongTien": 1910000,
+      "id": 11
+    },
+    {
+      "tenKH": "fghrh",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ Nam Sunmate WM192038GD",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "34tt",
+      "sdt": "0978040960",
+      "ghiChu": "qt443t",
+      "tongTien": 1210000,
+      "id": 12
+    },
+    {
+      "tenKH": "4t345",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ Nam Sunmate WM192038GD",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "0978040960",
+      "sdt": "0978040960",
+      "ghiChu": "0978040960",
+      "tongTien": 1210000,
+      "id": 13
+    },
+    {
+      "tenKH": "335",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ Nam Sunmate WM192038GD",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "ưe",
+      "sdt": "0978040960",
+      "ghiChu": "235235rgr",
+      "tongTien": 1210000,
+      "id": 14
+    },
+    {
+      "tenKH": "4t34t",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ Nam Sunmate WM192038GD",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "2525",
+      "sdt": "0978040960",
+      "ghiChu": "2525",
+      "tongTien": 1210000,
+      "id": 15
+    },
+    {
+      "tenKH": "3r3r",
+      "sanPham": [
+        {
+          "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "253253",
+      "sdt": "0978040960",
+      "ghiChu": "125235",
+      "tongTien": 1910000,
+      "id": 16
+    },
+    {
+      "tenKH": "rgrg",
+      "sanPham": [
+        {
+          "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "2525",
+      "sdt": "0978040960",
+      "ghiChu": "25235",
+      "tongTien": 1910000,
+      "id": 17
+    },
+    {
+      "tenKH": "2525",
+      "sanPham": [
+        {
+          "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "25252",
+      "sdt": "0978040960",
+      "ghiChu": "2",
+      "tongTien": 1910000,
+      "id": 18
+    },
+    {
+      "tenKH": "35345",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ nam Tissot Special Collections",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "25225",
+      "sdt": "0978040960",
+      "ghiChu": "252",
+      "tongTien": 790000,
+      "id": 19
+    },
+    {
+      "tenKH": "ewrewt",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ nam Tissot Special Collections",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "235235",
+      "sdt": "0978060960",
+      "ghiChu": "25253",
+      "tongTien": 790000,
+      "id": 20
+    },
+    {
+      "tenKH": "25325",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ nam Tissot Le Locle",
+          "soLuong": 2
+        }
+      ],
+      "diaChi": "2525",
+      "sdt": "0978040960",
+      "ghiChu": "2525",
+      "tongTien": 7440000,
+      "id": 21
+    },
+    {
+      "tenKH": "325r235r",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ nam Tissot Le Locle",
+          "soLuong": 2
+        }
+      ],
+      "diaChi": "23525",
+      "sdt": "0978040960",
+      "ghiChu": "251",
+      "tongTien": 7440000,
+      "id": 22
+    },
+    {
+      "tenKH": "34t34t",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ nam Tissot Le Locle",
+          "soLuong": 2
+        }
+      ],
+      "diaChi": "3t3t",
+      "sdt": "0978040944",
+      "ghiChu": "3t3yt",
+      "tongTien": 7440000,
+      "id": 23
+    },
+    {
+      "tenKH": "ềwf",
+      "sanPham": [
+        {
+          "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+          "soLuong": 5
+        }
+      ],
+      "diaChi": "235235",
+      "sdt": "0978040960",
+      "ghiChu": "25235",
+      "tongTien": 8910000,
+      "id": 24
+    },
+    {
+      "tenKH": "23525",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "23525",
+      "sdt": "0978040960",
+      "ghiChu": "255",
+      "tongTien": 3310000,
+      "id": 25
+    },
+    {
+      "tenKH": "Đặng Đình Giáp",
+      "sanPham": [
+        {
+          "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+          "soLuong": 2
+        },
+        {
+          "ten": "Đồng hồ Catier 59HJF0",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "Ngõ 50 , đường Trần Bình , phường Mai Dịch , quận Cầu Giấy , Hà Nội",
+      "sdt": "0355232762",
+      "ghiChu": "",
+      "tongTien": 8843500,
+      "id": 26
+    },
+    {
+      "tenKH": "4t34t",
+      "sanPham": [
+        {
+          "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+          "soLuong": 2
+        },
+        {
+          "ten": "Đồng hồ Catier 59HJF0",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "Ngõ 50 , đường Trần Bình , phường Mai Dịch , quận Cầu Giấy , Hà Nội",
+      "sdt": "0978040960",
+      "ghiChu": "2423",
+      "tongTien": 8843500,
+      "id": 27
+    },
+    {
+      "tenKH": "ff",
+      "sanPham": [
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 1
+        }
+      ],
+      "diaChi": "Ngõ 50 , đường Trần Bình , phường Mai Dịch , quận Cầu Giấy , Hà Nội",
+      "sdt": "0355232762",
+      "ghiChu": "",
+      "tongTien": 3310000,
+      "id": 28
+    },
+    {
+      "tenKH": "4t",
+      "sanPham": [
+        {
+          "ten": "Đồng hồ nam Tissot Le Locle",
+          "soLuong": 1
+        },
+        {
+          "ten": "Frederique Constant - Nam FC-718DGWM4H4 Size 42mm",
+          "soLuong": 6
+        },
+        {
+          "ten": "Đồng hồ nam Tissot Special Collections",
+          "soLuong": 1
+        },
+        {
+          "ten": "Olym Pianus - Nam OP990-45ADGS-GL-T Size 42mm",
+          "soLuong": 5
+        }
+      ],
+      "diaChi": "Ngõ 50 , đường Trần Bình , phường Mai Dịch , quận Cầu Giấy , Hà Nội",
+      "sdt": "0978040960",
+      "ghiChu": "0978040960",
+      "tongTien": 81430000,
+      "id": 29
+    }
+  ]
+}

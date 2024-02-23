@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="../../File_Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../File_Bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../Resource/font_awesome.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Khu vực header -->
+    <div class="container pb-4 mt-5">
+
+        <div class="row mt-5 bg-white">
+            <div style=" 
+            height: 3px;
+            width: 100%;
+            background-position-x: -30px;
+            background-size: 116px 3px;
+            background-image: repeating-linear-gradient(45deg,#6fa6d6,#6fa6d6 33px,transparent 0,transparent 41px,#f18d9b 0,#f18d9b 74px,transparent 0,transparent 82px);
+        " class=""></div>
+            <div class="d-flex align-items-center  p-4">
+                <img src="../../Resource/img/Sweet-removebg-preview.pngff" style="height: 100px;" alt="">
+                <h1 class="ms-3 my-auto" style="color: rgb(47, 182, 47);">| Quản lý đơn hàng</h1>
+            </div>
+        </div>
+
+       <div class="bg-white row py-4 px-5" style="border-top: 2px dotted blanchedalmond;">
+                
+                <!-- Danh sách sản phẩm -->
+                <table class="table mt-4">
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Tên khách hàng</th>
+                    <th>Địa chỉ</th>
+                    <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu danh sách sản phẩm sẽ được hiển thị ở đây -->
+                    <tr ng-repeat="item in dsDonHang">
+                        <td>{{item.id}}</td>
+                        <td class="fs-5" >{{item.tenKH}}</td>
+                        <td><p class="">{{item.diaChi}}</p></td>
+                        <td>
+                            <a class="btn rounded-4 me-2 px-3" style="font-size: large; background-color: rgb(254, 168, 212);border: 3px solid rgb(212, 45, 45); color: rgb(84, 113, 243);" ng-click="xuLiId(item.id)"  data-bs-toggle="modal" data-bs-target="#addCategoryModal" >Chi tiết</a>
+                            <button class="btn rounded-4 me-2 px-3" style="font-size: large; background-color: rgb(127, 255, 138); border: 3px solid rgb(69, 141, 242);" ng-click="xuLiId(item.id)"  data-bs-toggle="modal" data-bs-target="#updateCategoryModal"  >Sửa</button>
+                            
+                        </td>
+                    </tr>                
+                    
+                </tbody>
+                </table>
+            
+                <!-- Nút Thêm sản phẩm -->
+
+        </div>
+        <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title " style="color: rgb(58, 215, 215);" id="addCategoryModalLabel">Thông tin đơn hàng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <!-- Form Thêm sản phẩm sẽ được đặt ở đây -->
+                <form style="font-size: large;">
+                    <div class="mb-4">
+                    <label for="categoryName" style="color: #f18d9b;" class="form-label">Tên sản phẩm :</label>
+                    <div class="d-flex justify-content-between" ng-repeat="it in donHang.sanPham">
+                        <p>- {{it.ten}}</p>
+                        <p style="color:#f18d9b;" class="me-2">x {{it.soLuong}}</p>
+                    </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="categoryName" style="color: #f18d9b;" class="form-label">Tổng tiền</label>
+                    <p class="">{{tongGiaTri.toLocaleString()}} đ</p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="categoryName" style="color: #f18d9b;" class="form-label">Tên khách hàng</label>
+                    <p class="">{{donHang.tenKH}}</p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="categoryName" style="color: #f18d9b;" class="form-label">Số điện thoại</label>
+                    <p class="">{{donHang.sdt}}</p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="categoryName" style="color: #f18d9b;" class="form-label">Địa chỉ</label>
+                    <p class="">{{donHang.diaChi}}</p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="categoryName" style="color: #f18d9b;" class="form-label">Ghi chú</label>
+                    <p class="">{{donHang.ghiChu}}</p>
+                    </div>
+                    
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+            <style>
+                footer a{
+                    color: rgb(159, 199, 40);
+                    text-decoration: none;
+                }
+                a{
+                    color: unset;
+                    text-decoration: none;
+                }
+                a:hover{
+                    opacity: 0.7;
+                }
+                .btn:hover{
+                    opacity: 0.7;
+                    
+                }
+            </style>
+            <!-- Modal Thêm sản phẩm -->
+        <div class="modal fade" id="updateCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title " style="color: rgb(58, 215, 215);" id="addCategoryModalLabel">Sửa thông tin đơn hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <!-- Form Thêm sản phẩm sẽ được đặt ở đây -->
+                    <form>
+                        <div class="mb-4" style="font-size: large;">
+                            <label for="categoryName" style="color: #f18d9b;" class="form-label">Tên sản phẩm :</label>
+                            <div class="d-flex justify-content-between" ng-repeat="it in donHang.sanPham">
+                                <p>- {{it.ten}}</p>
+                                <p style="color:#f18d9b;" class="me-2">x {{it.soLuong}}</p>
+                            </div>
+                            </div>
+                        <div class="mb-4" style="font-size: large;">
+                            <label for="categoryName" style="color: #f18d9b;" class="form-label">Tổng tiền</label>
+                            <p class="">{{tongGiaTri.toLocaleString()}} đ</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoryName" style="color: #f18d9b;" class="form-label">Tên khách hàng</label>
+                            <input type="text" style="border-color: #6fa6d6;" ng-model="donHang.tenKH" class="form-control" id="categoryName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoryName" style="color: #f18d9b;" class="form-label">Số điện thoại</label>
+                            <input type="text" style="border-color: #6fa6d6;" ng-model="donHang.sdt" class="form-control" id="categoryName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoryName" style="color: #f18d9b;" class="form-label">Địa chỉ</label>
+                            <input type="text" style="border-color: #6fa6d6;" ng-model="donHang.diaChi" class="form-control" id="categoryName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoryName" style="color: #f18d9b;" class="form-label">Ghi chú</label>
+                            <input type="text" style="border-color: #6fa6d6;" ng-model="donHang.ghiChu" class="form-control" id="categoryName">
+                        </div>
+                        
+                        <div class="alert alert-danger mt-2" ng-hide="status">
+                            {{message}}
+                        </div>
+                        <button
+                            name=""
+                            id=""
+                            class="btn rounded-4 py-2 px-4"
+                            style="background-color: #7ee9dd; border: 3px solid rgb(231, 101, 183);font-size: large;color:rgb(124, 69, 2)"
+                            role="button"
+                            ng-click="xuLiSua()"
+                            >Sửa</button
+                        >
+                        
+                    </form>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+    <footer class="footer mt-5 border">
+        <div class="container-fluid w-100 bg-light">
+          <div class="row">
+            <div class="col-md-4 ">
+              <img class="ms-5" src="../../Resource/img/Sweet-removebg-preview.png" height="80px" alt="Logo">
+            </div>
+            <div class="col-md-3 mt-3 d-flex align-items-center ">
+              <ul class="list-unstyled " style="font-size: 16px;">
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ : <u>0978040960</u></a></li>
+              </ul>
+            </div>
+            <div class="col-md-1 mt-3 d-flex align-items-center fs-5">
+              <ul class="list-unstyled social-links"  style="font-size: 16px;">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 fs-5  mt-3">
+                Địa chỉ : <u>Số 8 ,Ngõ 50 Trần Bình , Phường Mai Dịch , Quận Cầu Giấy , Thành Phố Hà Nội</u>
+              </div>
+          </div>
+          
+          <div class="mx-auto mt-3 pb-4 copyright fs-5 w-100" >
+            &copy; Bản quyền thuộc về <a href="https://www.facebook.com/profile.php?id=100049975813334">Đặng Đình Giáp</a>
+          </div>
+        </div>
+      </footer>
+
+      
+</body>
+</html>
