@@ -5,7 +5,7 @@ app.controller('searchCrtl' , function ($scope , $routeParams , $http ,$rootScop
     $scope.dsDanhMuc = []
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/san-pham" ,
+        url : "https://armor-json-server.onrender.com/san-pham" ,
     }).then(function(data) {
         $scope.dsSanpham = data.data
         $scope.dsSanpham.forEach(item => {
@@ -15,7 +15,7 @@ app.controller('searchCrtl' , function ($scope , $routeParams , $http ,$rootScop
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/danh-muc" ,
+        url : "https://armor-json-server.onrender.com/danh-muc" ,
     }).then(function(data) {
         $scope.dsDanhMuc = data.data
         
@@ -26,7 +26,7 @@ app.controller('searchCrtl' , function ($scope , $routeParams , $http ,$rootScop
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
     }).then(function(data) {
         console.log(data)
             $rootScope.soLuongGH = data.data.listSanPham.length
@@ -45,7 +45,7 @@ app.controller('searchCrtl' , function ($scope , $routeParams , $http ,$rootScop
         if (select.value == "") {
             $http({
                 method : "GET" ,
-                url : "http://localhost:3000/san-pham" ,
+                url : "https://armor-json-server.onrender.com/san-pham" ,
             }).then(function(data) {
                 $scope.dsSanpham = data.data
                 $scope.dsSanpham.forEach(item => {
@@ -56,7 +56,7 @@ app.controller('searchCrtl' , function ($scope , $routeParams , $http ,$rootScop
         else{
             $http({
                 method : "GET" ,
-                url : "http://localhost:3000/san-pham" ,
+                url : "https://armor-json-server.onrender.com/san-pham" ,
                 params : {
                     idDanhMuc : select.value 
                 }

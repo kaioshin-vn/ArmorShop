@@ -112,7 +112,7 @@ app.controller('registerCtrl' , function ($scope , $http , $location) {
         $scope.dangKy = () => {
             $http({
             method : "GET" ,
-            url : "http://localhost:3000/tai-khoan" ,
+            url : "https://armor-json-server.onrender.com/tai-khoan" ,
         }).then(function(data) {
             $scope.dsTK = data.data ;
             if ($scope.dsTK.some((tk) => {
@@ -139,7 +139,7 @@ app.controller('registerCtrl' , function ($scope , $http , $location) {
             }
             $http({
                 method : "POST" ,
-                url : "http://localhost:3000/tai-khoan" ,
+                url : "https://armor-json-server.onrender.com/tai-khoan" ,
                 data : $scope.taiKhoan
             }).then(function() {
                 alert("Đăng ký thành công!")

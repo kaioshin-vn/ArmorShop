@@ -9,7 +9,7 @@ app.controller('cartCrtl' , function ($scope , $http , $routeParams , $rootScope
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
     }).then(function(data) {
             $rootScope.soLuongGH = data.data.listSanPham.length
      })
@@ -93,7 +93,7 @@ app.controller('cartCrtl' , function ($scope , $http , $routeParams , $rootScope
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
     }).then(function(data) {
             $rootScope.soLuongGH = data.data.listSanPham.length
             $scope.gioHang = data.data.listSanPham ;
@@ -102,7 +102,7 @@ app.controller('cartCrtl' , function ($scope , $http , $routeParams , $rootScope
             $scope.gioHang.forEach(element => {
                 $http({
                     method : "GET" ,
-                    url : "http://localhost:3000/san-pham/" + element.idSanPham ,
+                    url : "https://armor-json-server.onrender.com/san-pham/" + element.idSanPham ,
                 }).then(function(response) {
                     response.data.soLuongSP = element.soLuong;
                     response.data.soLuongBanDau = element.soLuong;
@@ -128,13 +128,13 @@ app.controller('cartCrtl' , function ($scope , $http , $routeParams , $rootScope
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
     }).then(function(data) {
             $scope.listSanPham = data.data.listSanPham
             if ($routeParams.idSp != "null") {
                 $http({
                     method : "GET" ,
-                    url : "http://localhost:3000/san-pham/" + $routeParams.idSp,
+                    url : "https://armor-json-server.onrender.com/san-pham/" + $routeParams.idSp,
                 }).then(function(response) {
                             $scope.spMuaLuon =  response.data
                             $scope.themVaoGH = true ;
@@ -175,7 +175,7 @@ app.controller('cartCrtl' , function ($scope , $http , $routeParams , $rootScope
         $scope.xuLiXoa = () => {
             $http({
                 method : "GET" ,
-                url : "http://localhost:3000/tai-khoan/"+ $routeParams.idTk  ,
+                url : "https://armor-json-server.onrender.com/tai-khoan/"+ $routeParams.idTk  ,
             }).then(function(data) {
                 let tk = data.data ;
                 tk.listSanPham = tk.listSanPham.filter ( (e) => {
@@ -184,7 +184,7 @@ app.controller('cartCrtl' , function ($scope , $http , $routeParams , $rootScope
                 console.log(tk.listSanPham)
                 $http({
                     method : "PUT" ,
-                    url : "http://localhost:3000/tai-khoan/"+ $routeParams.idTk  ,
+                    url : "https://armor-json-server.onrender.com/tai-khoan/"+ $routeParams.idTk  ,
                     data : tk 
                 })
             }).then(()=> {

@@ -28,7 +28,7 @@ app.controller('updateProductCrtl' , function ($scope , $http , $routeParams , $
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
     }).then(function(data) {
         console.log(data)
             $rootScope.soLuongGH = data.data.listSanPham.length
@@ -37,7 +37,7 @@ app.controller('updateProductCrtl' , function ($scope , $http , $routeParams , $
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/san-pham/" + $routeParams.id ,
+        url : "https://armor-json-server.onrender.com/san-pham/" + $routeParams.id ,
     }).then(function(data) {
         $scope.sanPhamUpdate = data.data;
         console.log($scope.sanPhamUpdate)
@@ -45,7 +45,7 @@ app.controller('updateProductCrtl' , function ($scope , $http , $routeParams , $
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/danh-muc" ,
+        url : "https://armor-json-server.onrender.com/danh-muc" ,
     }).then(function(data) {
         $scope.dsDanhMuc= data.data ;
     })
@@ -106,7 +106,7 @@ app.controller('updateProductCrtl' , function ($scope , $http , $routeParams , $
         
         $http({
             method : "PUT" ,
-            url : "http://localhost:3000/san-pham/" + $routeParams.id ,
+            url : "https://armor-json-server.onrender.com/san-pham/" + $routeParams.id ,
             data : $scope.sanPhamUpdate
         }).then(function() {
             alert("Sửa thành công thông tin sản phẩm!")

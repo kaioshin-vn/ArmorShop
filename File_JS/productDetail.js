@@ -21,7 +21,7 @@ app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$r
     let soLuong = document.getElementById("soLuong")
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/san-pham/" +  $routeParams.id,
+        url : "https://armor-json-server.onrender.com/san-pham/" +  $routeParams.id,
     }).then(function(data) {
         $scope.sanPham= data.data ;
         $scope.sanPham.giaThatSP = $scope.sanPham.gia / 100 * (100 - $scope.sanPham.giamGia ) ;
@@ -29,7 +29,7 @@ app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$r
    
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + id,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + id,
     }).then(function(data) {
         console.log(data)
             $rootScope.soLuongGH = data.data.listSanPham.length
@@ -37,7 +37,7 @@ app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$r
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/san-pham" ,
+        url : "https://armor-json-server.onrender.com/san-pham" ,
     }).then(function(data) {
         $scope.dsSanPham= data.data ;
         let arrNumber = [];
@@ -89,7 +89,7 @@ app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$r
     $scope.xuLiThemGioHang = (e) => {
         $http({
             method : "GET" ,
-            url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk ,
+            url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk ,
         }).then( function(data){
             let trungSp = false ;
             $scope.tk = data.data ;
@@ -111,7 +111,7 @@ app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$r
             
             $http({
                 method : "PUT" ,
-                url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk ,
+                url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk ,
                 data : $scope.tk
             }).then( function(data){
                 

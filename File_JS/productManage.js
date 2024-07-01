@@ -4,7 +4,7 @@ app.controller('productManageCrtl' , function ($scope , $http , $routeParams , $
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/san-pham" ,
+        url : "https://armor-json-server.onrender.com/san-pham" ,
     }).then(function(data) {
         $scope.dsSanPham= data.data ;
     })
@@ -13,7 +13,7 @@ app.controller('productManageCrtl' , function ($scope , $http , $routeParams , $
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/danh-muc" ,
+        url : "https://armor-json-server.onrender.com/danh-muc" ,
     }).then(function(data) {
         $scope.dsDanhMuc= data.data ;
     })
@@ -56,7 +56,7 @@ const formattedDate = `${month}/${day}/${year}`;
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
     }).then(function(data) {
         console.log(data)
             $rootScope.soLuongGH = data.data.listSanPham.length
@@ -118,7 +118,7 @@ const formattedDate = `${month}/${day}/${year}`;
 
         $http({
             method : "POST" ,
-            url : "http://localhost:3000/san-pham" ,
+            url : "https://armor-json-server.onrender.com/san-pham" ,
             data : $scope.sanPham
         }).then(function() {
             alert("Thêm thành công sản phẩm mới!")
@@ -128,7 +128,7 @@ const formattedDate = `${month}/${day}/${year}`;
     $scope.xuLiXoa = () => {
         $http({
             method : "DELETE" ,
-            url : "http://localhost:3000/san-pham/"+ $scope.idDuocChon ,
+            url : "https://armor-json-server.onrender.com/san-pham/"+ $scope.idDuocChon ,
         }).then(function() {
             alert("Xóa thành công sản phẩm!")
         })

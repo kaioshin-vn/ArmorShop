@@ -4,7 +4,7 @@ app.controller('billManageCrtl' , function ($scope ,$routeParams , $http , $root
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
     }).then(function(data) {
         console.log(data)
             $rootScope.soLuongGH = data.data.listSanPham.length
@@ -32,7 +32,7 @@ app.controller('billManageCrtl' , function ($scope ,$routeParams , $http , $root
       }
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/don-hang" ,
+        url : "https://armor-json-server.onrender.com/don-hang" ,
     }).then(function(data) {
         $scope.dsDonHang= data.data ;
     })
@@ -45,7 +45,7 @@ app.controller('billManageCrtl' , function ($scope ,$routeParams , $http , $root
 
         $http({
             method : "GET" ,
-            url : "http://localhost:3000/don-hang/" + $scope.idDuocChon
+            url : "https://armor-json-server.onrender.com/don-hang/" + $scope.idDuocChon
         }).then(function(data) {
             $scope.donHang= data.data ;
             $scope.tongGiaTri = data.data.tongTien
@@ -86,7 +86,7 @@ app.controller('billManageCrtl' , function ($scope ,$routeParams , $http , $root
         
         $http({
             method : "PUT" ,
-            url : "http://localhost:3000/don-hang/" + $scope.idDuocChon,
+            url : "https://armor-json-server.onrender.com/don-hang/" + $scope.idDuocChon,
             data : $scope.donHang
         }).then(function() {
             alert("Sửa thành công thông tin đơn hàng!")

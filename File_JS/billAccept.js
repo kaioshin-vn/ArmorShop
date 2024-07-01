@@ -34,7 +34,7 @@ app.controller('billAcceptCtrl' , function ($scope,$routeParams , $http , $rootS
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $rootScope.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $rootScope.idTk,
     }).then(function(data) {
             $rootScope.soLuongGH = data.data.listSanPham.length
      })
@@ -42,7 +42,7 @@ app.controller('billAcceptCtrl' , function ($scope,$routeParams , $http , $rootS
      $scope.sp.forEach((e) => {
         $http({
             method : "GET" ,
-            url : "http://localhost:3000/san-pham/" + e.idSp
+            url : "https://armor-json-server.onrender.com/san-pham/" + e.idSp
         }).then(function(data){
             let sp = data.data
             $scope.donHang.push({
@@ -99,14 +99,14 @@ app.controller('billAcceptCtrl' , function ($scope,$routeParams , $http , $rootS
 
         $http({
             method : "POST" ,
-            url : "http://localhost:3000/don-hang",
+            url : "https://armor-json-server.onrender.com/don-hang",
             data : $scope.ttDonHang
         }).then(function(response) {
             
 
             $http({
                 method : "GET" ,
-                url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+                url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
             }).then(function(response) {
                 let tk = response.data ;
                 $scope.sp.forEach((e) => {
@@ -118,7 +118,7 @@ app.controller('billAcceptCtrl' , function ($scope,$routeParams , $http , $rootS
                 })
                 $http({
                     method : "PUT" ,
-                    url : "http://localhost:3000/tai-khoan/"+ $routeParams.idTk  ,
+                    url : "https://armor-json-server.onrender.com/tai-khoan/"+ $routeParams.idTk  ,
                     data : tk 
                 }).then((rp) => {
                     alert("Đặt hàng thành công !")

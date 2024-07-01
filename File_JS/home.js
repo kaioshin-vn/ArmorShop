@@ -47,7 +47,7 @@ app.controller('homeCtrl' , function ($scope , $http , $routeParams ,$rootScope)
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/san-pham" ,
+        url : "https://armor-json-server.onrender.com/san-pham" ,
     }).then(function(data) {
         $scope.dsSanpham = data.data
         $scope.dsSanpham.forEach(item => {
@@ -59,7 +59,7 @@ app.controller('homeCtrl' , function ($scope , $http , $routeParams ,$rootScope)
     if (dangNhap != 0) {
         $http({
             method : "GET" ,
-            url : "http://localhost:3000/tai-khoan/" + $routeParams.id ,
+            url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.id ,
         }).then(function(data) {
             console.log(data)
                 $scope.soLuongGH = data.data.listSanPham.length

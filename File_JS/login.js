@@ -16,7 +16,7 @@ app.controller('loginCrtl' , function ($scope , $http , $location) {
 
         $http({
             method : "GET" ,
-            url : "http://localhost:3000/tai-khoan" ,
+            url : "https://armor-json-server.onrender.com/tai-khoan" ,
         }).then(function(data) {
             $scope.dsTK = data.data ;
             $scope.dsTK = $scope.dsTK.filter((tk) => {

@@ -4,7 +4,7 @@ app.controller('categoryProductManageCrtl' , function ($scope ,$routeParams , $h
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/danh-muc" ,
+        url : "https://armor-json-server.onrender.com/danh-muc" ,
     }).then(function(data) {
         $scope.dsDanhMuc= data.data ;
     })
@@ -13,7 +13,7 @@ app.controller('categoryProductManageCrtl' , function ($scope ,$routeParams , $h
 
     $http({
         method : "GET" ,
-        url : "http://localhost:3000/tai-khoan/" + $routeParams.idTk,
+        url : "https://armor-json-server.onrender.com/tai-khoan/" + $routeParams.idTk,
     }).then(function(data) {
             $rootScope.soLuongGH = data.data.listSanPham.length
      })
@@ -41,7 +41,7 @@ app.controller('categoryProductManageCrtl' , function ($scope ,$routeParams , $h
         $scope.status = true ;
         $http({
             method : "POST" ,
-            url : "http://localhost:3000/danh-muc" ,
+            url : "https://armor-json-server.onrender.com/danh-muc" ,
             data : $scope.danhMuc
         }).then(function() {
             alert("Thêm thành công danh mục!")
@@ -51,7 +51,7 @@ app.controller('categoryProductManageCrtl' , function ($scope ,$routeParams , $h
     $scope.xuLiXoa = () => {
         $http({
             method : "DELETE" ,
-            url : "http://localhost:3000/danh-muc/"+ $scope.idDuocChon ,
+            url : "https://armor-json-server.onrender.com/danh-muc/"+ $scope.idDuocChon ,
         }).then(function() {
             alert("Xóa thành công danh mục!")
         })
@@ -68,7 +68,7 @@ app.controller('categoryProductManageCrtl' , function ($scope ,$routeParams , $h
 
         $http({
             method : "PUT" ,
-            url : "http://localhost:3000/danh-muc/"+ $scope.idDuocChon ,
+            url : "https://armor-json-server.onrender.com/danh-muc/"+ $scope.idDuocChon ,
             data : $scope.danhMuc 
         }).then(function() {
             alert("Sửa thành công tên danh mục!")
