@@ -7,7 +7,7 @@ app.controller('billAcceptCtrl' , function ($scope,$routeParams , $http , $rootS
 
     $rootScope.idTk = $routeParams.idTk;
     $scope.id = $routeParams.idTk;
-    if ($rootScope.idTk == null) {
+    if ($rootScope.idTk == "null") {
         $location.path(`/login`)
     }
 
