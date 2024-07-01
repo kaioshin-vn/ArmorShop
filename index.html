@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="../File_Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../File_Bootstrap/node_modules/bootstrap/dist/css/main.css">
-    <script src="../File_Bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../Resource/font_awesome.js"></script>
+    <link rel="stylesheet" href="./File_Bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./File_Bootstrap/node_modules/bootstrap/dist/css/main.css">
+    <script src="./File_Bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./Resource/font_awesome.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <script src="../File_Angular/angular/angular.js"></script>
-    <script src="../File_Angular/angular/angular-route.js"></script>
+    <script src="./File_Angular/angular/angular.js"></script>
+    <script src="./File_Angular/angular/angular-route.js"></script>
 
     <script>
         var app = angular.module('App',['ngRoute']) ;
@@ -45,19 +45,19 @@
 
         app.config(function ($routeProvider) {
             $routeProvider.when("/product-detail/:id/:idTk", {
-                templateUrl : "../../Page/ProductDetails.html" ,
+                templateUrl : "./ProductDetails.html" ,
                 controller : "productDetailCrtl"
             })
             .when("/product-manage/:idTk", {
-                templateUrl : "../Page/admin/ProductManage.html" ,
+                templateUrl : "./admin/ProductManage.html" ,
                 controller : "productManageCrtl"
             })
             .when("/bill-manage/:idTk", {
-                templateUrl : "../Page/admin/BillManage.html" ,
+                templateUrl : "./admin/BillManage.html" ,
                 controller : "billManageCrtl"
             })
             .when("/category-product-manage/:idTk", {
-                templateUrl : "../Page/admin/CategoryProductManage.html" ,
+                templateUrl : "./admin/CategoryProductManage.html" ,
                 controller : "categoryProductManageCrtl"
             })
             .when("/login", {
@@ -81,7 +81,7 @@
                 controller : "billAcceptCtrl"
             })
             .when("/admin/home/:dangNhap/:id",{
-                templateUrl : "../Page/admin/Home.html" ,
+                templateUrl : "./admin/Home.html" ,
                 controller : "homeCtrlAd"
             })
             .when("/home/:dangNhap/:id",{
@@ -101,18 +101,18 @@
             })
         })
     </script>
-    <script src="../../File_JS/homeAd.js"></script>
-    <script src="../../File_JS/home.js"></script>
-    <script src="../../File_JS/billManage.js"></script>
-    <script src="../../File_JS/categoryProductManage.js"></script>
-    <script src="../../File_JS/productManage.js"></script>
-    <script src="../../File_JS/productDetail.js"></script>
-    <script src="../../File_JS/updateProduct.js"></script>
-    <script src="../../File_JS/register.js"></script>
-    <script src="../../File_JS/login.js"></script>
-    <script src="../../File_JS/cart.js"></script>
-    <script src="../../File_JS/billAccept.js"></script>
-    <script src="../../File_JS/search.js"></script>
+    <script src="./File_JS/homeAd.js"></script>
+    <script src="./File_JS/home.js"></script>
+    <script src="./File_JS/billManage.js"></script>
+    <script src="./File_JS/categoryProductManage.js"></script>
+    <script src="./File_JS/productManage.js"></script>
+    <script src="./File_JS/productDetail.js"></script>
+    <script src="./File_JS/updateProduct.js"></script>
+    <script src="./File_JS/register.js"></script>
+    <script src="./File_JS/login.js"></script>
+    <script src="./File_JS/cart.js"></script>
+    <script src="./File_JS/billAccept.js"></script>
+    <script src="./File_JS/search.js"></script>
 
 </head>
 <body ng-app="App">
@@ -133,7 +133,7 @@
                 <div class="d-flex align-items-center">
                     <!-- Khu vực logo -->
                     <a href="#!home/1/{{idTk}}" class="me-5">
-                        <img src="../../Resource/img/Sweet-removebg-preview.png" style="height: 40px;">
+                        <img src="./Resource/img/Sweet-removebg-preview.png" style="height: 40px;">
                     </a>
   
                     <!-- Danh mục -->
