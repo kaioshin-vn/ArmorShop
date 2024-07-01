@@ -3,8 +3,14 @@ app.controller('billAcceptCtrl' , function ($scope,$routeParams , $http , $rootS
     header.style.display = 'block';
     $scope.toTal = 0 ;
 
+    
+
     $rootScope.idTk = $routeParams.idTk;
     $scope.id = $routeParams.idTk;
+    if ($rootScope.idTk == null) {
+        $location.path(`/login`)
+    }
+
     $scope.ttDonHang = {
         tenKH:"",
         sanPham: [
