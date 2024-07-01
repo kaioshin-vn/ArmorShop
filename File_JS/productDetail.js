@@ -1,4 +1,4 @@
-app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$rootScope) {
+app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$rootScope , $window) {
     let header = document.getElementById('header') 
     header.style.display = 'block';
 
@@ -24,7 +24,8 @@ app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$r
         url : "https://armor-json-server.onrender.com/san-pham/" +  $routeParams.id,
     }).then(function(data) {
         $scope.sanPham= data.data ;
-        $scope.sanPham.giaThatSP = $scope.sanPham.gia / 100 * (100 - $scope.sanPham.giamGia ) ;
+        $scope.sanPham.giaThatSP = $scope.sanPham.gia / 100 * (100 - $scope.sanPham.giamGia);
+        $window.scrollTo(0, 0);
     })
    
     $http({
@@ -117,7 +118,8 @@ app.controller('productDetailCrtl' , function ($scope , $http , $routeParams ,$r
                 
                 $scope.statusAdd = true ;
                 $scope.message = "Đã thêm thành công vào giỏ hàng !"
-                alert("Đã thêm thành công vào giỏ hàng!")
+                alert("Đã thêm thành công vào giỏ hàng!");
+                $window.location.reload();
             })
         })
     }
